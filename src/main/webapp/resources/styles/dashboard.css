@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+#center_column #dashboard_balances {
+	
+	-moz-box-sizing: border-box;
+    padding: 10px 15px;
+    width: 378px;
+}
+
+#center_column #dashboard_balances .summary:after {
+    clear: both;
+}
+
+#center_column #dashboard_balances .summary:before, #center_column #dashboard_balances .summary:after {
+    content: "";
+    display: table;
+}
+
+#center_column #dashboard_balances .summary:before, #center_column #dashboard_balances .summary:after {
+    content: "";
+    display: table;
+}
+
+#center_column #dashboard_balances .summary {
+    margin: 10px 0;
+    text-align: center;
+}

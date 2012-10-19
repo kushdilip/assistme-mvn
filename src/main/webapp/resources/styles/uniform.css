@@ -1,0 +1,166 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background:
+		url("http://www.techiestuffs.com/blog/wp-content/uploads/2012/09/pipes.png")
+		repeat scroll 0 0 #000000;
+}
+
+.container {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+#header {
+	width: 100%;
+	background-image: url("/assistme-mvn/resources/images/header.png");
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 0px;
+	bottom: 0px;
+}
+
+#header h1 {
+	background: orange; /*Background color to header*/
+	background: -moz-linear-gradient(top, red, FFFFFF);
+	/*from to colors, I have used simple name it can be replaced by color codes*/
+	background: -webkit-gradient(linear, left top, left bottom, from(red),
+		to(white) );
+	padding: 10px 20px;
+	margin-left: -20px;
+	margin-top: 0;
+	position: relative;
+	width: 70%;
+	/*from droping box shadow at the bottom of header*/
+	-moz-box-shadow: 1px 1px 3px #292929;
+	-webkit-box-shadow: 1px 1px 3px #292929;
+	box-shadow: 1px 1px 3px #292929;
+	color: #454545;
+	text-shadow: 0 1px 0 white;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+#header h2 {
+	font-size: 18px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+.arrow {
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border-left: 20px solid transparent;
+	border-top: 10px solid #c8c8c8;
+	top: 104%;
+	left: 0;
+	position: absolute;
+}
+
+#loginbar {
+	height: 490px;
+	width: 350px;
+	float: right;
+	font-size: large;
+	font-weight: bold;
+}
+
+.shiny-blue {
+	background-color: #759AE9;
+	background-image: -moz-linear-gradient(center top, #759AE9 0%, #376FE0 50%, #1A5AD9 50%,
+		#2463DE 100%);
+	border-color: #1F58CC #1B4DB3 #174299;
+	border-radius: 4px 4px 4px 4px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 0 2px 0 rgba(57, 140, 255, 0.8) inset;
+	color: #FFFFFF;
+	font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+	padding: 7px 0;
+	text-shadow: 0 -1px 1px #1A5AD9;
+	width: 70px;
+}
+
+.shiny-blue:hover {
+	background-color: #5D89E8;
+	background-image: -moz-linear-gradient(center top, #5D89E8 0%, #2261E0 50%, #044BD9 50%,
+		#0D53DE 100%);
+	cursor: pointer;
+}
+
+.shiny-blue:active {
+	border-color: #1B4DB3 #174299 #133780;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 0 5px 2px #1A47A0 inset, 0 1px 0 #EEEEEE;
+}
+
+#base {
+	float: left;
+	width: 12em;
+	height: 100%;
+	border-right: 1px solid #000;
+	padding: 0 0 1em 0;
+	margin-bottom: 1em;
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Lucida, Geneva,
+		Helvetica, Arial, sans-serif;
+	/* 	background-color: #90bade;
+ */
+	background-image: url("/assistme-mvn/resources/images/header.png");
+	color: #333;
+}
+
+#base ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#base li {
+	border-bottom: 1px solid #90bade;
+	margin: 0;
+}
+
+#base li a {
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	border-left: 10px solid #1958b7;
+	border-right: 10px solid #508fc4;
+	background-color: #2175bc;
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+}
+
+html>body #baseli a {
+	width: auto;
+}
+
+#base li a:hover {
+	border-left: 10px solid #1c64d1;
+	border-right: 10px solid #5ba3e0;
+	background-color: #2586d7;
+	color: #fff;
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	border: 1px solid #333;
+	background-color: #ffed8a;
+	padding: 2px 6px;
+}
+
+#dashboard_balances {
+    padding-left: 200px;
+}
+
