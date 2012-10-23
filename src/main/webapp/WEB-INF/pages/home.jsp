@@ -8,7 +8,6 @@
 <link href="resources/styles/uniform.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="resources/js/jquery-ui.js"></script>
 <script type="text/javascript" src="resources/js/uniform.js"></script>
-
 </head>
 <body>
 	
@@ -17,7 +16,7 @@
 		<jsp:include page="../common/menubar.jsp"></jsp:include>
 		
 		<div align="center">
-			<h1>Welcome ${currentUser.firstName}</h1>
+			<h1>Welcome! ${currentUser.firstName}.</h1>
 		</div>
 		<jsp:include page="../common/footer.jsp"></jsp:include>
 </body>

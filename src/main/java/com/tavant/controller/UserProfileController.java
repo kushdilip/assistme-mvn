@@ -1,14 +1,11 @@
 package com.tavant.controller;
 
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,19 +19,18 @@ import com.tavant.validator.ProfileValidator;
 
 @Controller
 public class UserProfileController {
+	
+	@Autowired
 	private UserService userService;
+	
 	@Autowired
 	private ProfileValidator profileValidator;
+	
 	@Autowired
 	private JavaMD5HashService jHashService;
 
 	@Autowired
 	private PasswordValidator passwordValidator;
-
-	@Autowired
-	public void setUserService(UserService userService) {
-		this.userService = userService;
-	}
 
 	@RequestMapping(value = "/profile")
 	public ModelAndView showProfile(HttpServletRequest request, ModelMap model) {
@@ -77,7 +73,7 @@ public class UserProfileController {
 				"currentUser"));
 
 		// System.out.println((User)request.getSession().getAttribute("currentUser"));
-		return new ModelAndView("profilePage", model);
+		return new ModelAndView("profilePage");
 
 	}
 
@@ -111,21 +107,23 @@ public class UserProfileController {
 		if (!(changePassword.getOldPassword().isEmpty() || pass.equals(user.getPassword()))) {
 			result.rejectValue("oldPassword", "wrong.password");
 		}
-		
-		
+				
 		if (result.hasErrors()) {
 			return new ModelAndView("changePasswordForm");
 		}
 		
+		String newPassword = changePassword.getConfirmPassword();
+		user.setPassword(jHashService.md5(newPassword));
+		userService.updatePassword(user);
+
+		return new ModelAndView("redirect:home.html");
 		
-		
-		if ((pass.equals(user.getPassword()))
+/*		if ((pass.equals(user.getPassword()))
 				&& (changePassword.getNewPassword().equals(changePassword
 						.getConfirmPassword()))) {
 			String newPassword = changePassword.getConfirmPassword();
 			user.setPassword(jHashService.md5(newPassword));
 			userService.updatePassword(user);
-			System.out.println("inside if loop " + newPassword);
 
 			return new ModelAndView("redirect:home.html");
 		}
@@ -133,5 +131,5 @@ public class UserProfileController {
 		else {
 			return new ModelAndView("redirect:home.html");
 		}
-	}
+*/	}
 }

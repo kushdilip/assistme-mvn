@@ -25,7 +25,7 @@
 				<tr>
 					<td>Old Password:</td>
 					<td><form:password path="oldPassword" /></td>
-					<td><form:errors path="oldPassword" cssClass="error" /></td>
+					<td><form:errors path="oldPassword" cssClass="error"  /></td>
 				</tr>
 				<tr>
 					<td>New Password:</td>

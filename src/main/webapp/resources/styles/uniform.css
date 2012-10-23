@@ -161,6 +161,31 @@ html>body #baseli a {
 }
 
 #dashboard_balances {
-    padding-left: 200px;
+	padding-left: 200px;
+}
+
+#dropdownContainer {
+	float: right;
+	width: 100px;
+	text-align: center;
+	margin-top: 25px;
+}
+
+#showDropdown {
+	
+	cursor: pointer;
+}
+
+#dropdown {
+	display: none;
+	position: absolute;
+	/* background-color: white;
+	 border: 1px solid #000;
+	 */
+	 width: 98px;
+}
+
+#dropdown ul li a {
+	background-color: chocolate;
 }
 
